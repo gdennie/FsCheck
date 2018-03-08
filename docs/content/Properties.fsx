@@ -8,7 +8,8 @@ open System
 (**
 # Properties
 
-Properties are expressed as F# function definitions or C# lambdas or methods. 
+Properties are FsCheck's version of unit test cases (or function requirement specification) and are expressed as F# function or as C# lambdas or methods.
+FsCheck will invoke each property passing in type specific auto generated arguments per the specification of each property's parameter list.
 Properties are universally quantified over their parameters, so *)
 
 let revRevIsOrig (xs:list<int>) = List.rev(List.rev xs) = xs
